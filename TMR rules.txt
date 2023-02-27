@@ -1,0 +1,86 @@
+1. kono number die je kono brand  die  activity jeidin ai kora hok na kno(14 dec 22) 
+   jodi sheitar using brand--DERBY, PILOT, HOLLYWOOD, SHEIKH, ROYALS, K2, NAVY, REAL
+   aigular moddhe hoi tahole,15 ba 30 diner kono interval applicable hobe na,
+   porer dinei activity kora jabe(15-dec-22)  MARISE die.-Previous activity jekono brand diyei hote pare,
+   but shudhu condition hocche using brand aigular moddhe hote hobe.
+	BR_ACTIVITY_CONSUMER_ID=7187609
+===========
+2.      kono number die jodi activity sumnmoon die kora hoi,14 dec 22 te
+	then ami jodi same oi number a porer din,15 dec 22 a activity korte
+ 	parbo MARISE module die tahile ami activity korte parbo.
+=======
+3.
+-------------------------------------------------------------------------
+====================Tmr/Tms login in App====================
+------------------------------------------------------------------------
+1.User r attendence na thakle--Attendence not found show korbe.
+2.User r username/password wrong thakle--username or pass incorrect show korbe
+
+-------------------------------------------------------------------------
+====================Tmr/Tms location update in Database/portal====================
+------------------------------------------------------------------------
+1. BRGeoloacation table a----akta tmr r akdiner r jonno akta row thakbe
+   abong oi akta row te 10 mint por por lat abong long update hobe.
+
+2. abong BRGeoloacation_Archive table a----akta tmr r akdiner jonno jotobar lat,long
+   update hobe totobar ai table shei tmr r jonno value gulo insert hote thakbe.
+-------------------------------------------------------------------
+=================Per Consumer/Number Acitivity Limit==========================
+-------------------------------------------------------------------
+1.Marise  = 3 ta activity korte parbe per number die(New + Repeat).
+2.SunMoon = 3 ta activity korte parbe per number(New + Repeat).
+3.Rally + Rally Racer     = 3 ta activity korte parbe per number(New + Repeat).
+4.MBD regular + MBD magic = 3 ta activity korte parbe per number(New + Repeat).
+-------------------------------------------------------------------------------
+==============Offered_Brand/Brand/Contact_Module jdi (Sun_Moon) thake==========
+-------------------------------------------------------------------------------
+ 1. previous brand sumnoon-------bortoman brand sunmoon hole 1 month bindings thakbe
+ 2. previous brand Marise--------bortoman brand sunmoon hole 1 month bindings thakbe
+ 4. previous brand rally---------bortoman brand sunmoon hole 1 month bindings thakbe
+ 5. previous brand rally_racer---bortoman brand sunmoon hole 1 month bindings thakbe
+
+ 6. previous brand MBD-----------bortoman brand sunmoon hole Activity kora jabe nah
+
+-------------------------------------------------------------------------------
+==============Offered_Brand/Brand/Contact_Module jdi (MBD) thake===============
+-------------------------------------------------------------------------------
+
+ 1. previous brand sumnoon-------bortoman brand MBD hole 15 Days r bindings thakbe
+ 2. previous brand Marise--------bortoman brand MBD hole 15 Days r bindings thakbe
+ 3. previous brand MBD-----------bortoman brand MBD hole 15 Days r bindings thakbe
+ 4. previous brand rally---------bortoman brand MBD hole 15 Days r bindings thakbe
+ 5. previous brand rally_racer---bortoman brand MBD hole 15 Days r bindings thakbe
+
+-------------------------------------------------------------------------------
+ ==============Offered_Brand/Brand/Contact_Module jdi (Marise) thake===========
+-------------------------------------------------------------------------------
+
+ 1. previous brand marise----bortoman brand marise hole 1 month bindings thakbe
+ 2. previous brand MBD-------bortoman brand marise hole interval r kono bindings nai- 
+    shudhu using brand ai brand thakle activity kora jabe--DERBY, PILOT, HOLLYWOOD, 
+    SHEIKH, ROYALS, K2, NAVY, REAL.
+ 3. previous brand sunmoon---bortoman brand marise hole interval r kono bindings nai- 
+    shudhu using brand ai brand thakle activity kora jabe--DERBY, PILOT, HOLLYWOOD, 
+    SHEIKH, ROYALS, K2, NAVY, REAL.
+
+========================Testing_Scenarios=====================================
+
+1.Per Tmr kotogulo activity korte partese--BrUser_Activity_Count table a?
+2.Per consumer (per brand a-Sunmoon,MBD,Marise) 3 ta kore activity korte partese kina?
+3.Consumer_Activity_Count table a--Thikmoto data ashtece kina?
+4.Consumer_Activity_Count table a--Consumer r activity count ashtece kina?
+5.tmr r attendence na attendence not found ashbe?
+6.tmr r pass/username wrong dile,wrong pass ba username given ashbe?
+=============================================================================
+7.Repeated_Consumer_Number die activity kora jacche kina
+
+8.Akta number die akta module a prothom a akta new contact,abong r pore 1 month por por
+  aro duita activity same oi mudule die kora jacche kina?
+9.Akta number die akta module a prothom a akta new contact,abong r pore 1 month por por
+  aro duita activity onno mudule die ora jacche kina?
+ --jdi kora jai tahole oi cunsumer r jonno Consumer_Activity_Count table a thik moto
+ --module wise activity count ashtece kina?jehetu per module per number
+ --max 3 ta activity kora jabe,hok repeat ba new?
+
+7447880
+

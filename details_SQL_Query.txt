@@ -1,0 +1,43 @@
+--I can not apply group by in all column at once like vta.* but I have to mention specific name of all those column.
+======================================================================================
+select v.teritory_name ,count(v.route_id)
+from v_teritory_all v
+where teritory_id =1033 
+group by v.teritory_name;
+
+
+===============
+--Total koita BrUser First_day Activity Koreche--
+==================
+select distinct(bps.br_user_user_id),bps.pcc_contact_type
+       
+from APPTM.bractivity brac
+left join APPTM.bruser_pcc_status bps on bps.br_user_user_id = brac.br_user_id
+join APPTM.bractivity_consumer bc on bc.id = brac.br_activity_consumer_id
+join APPTM.bractivity_contact bcc on bcc.id = bc.br_activity_contact_id
+
+where brac.target_date = '31-JAN-23'
+and bps.pcc_contact_type in('FIRST_DAY')
+and bps.is_activated=1;
+===========================CEP============
+select*
+from v_teritory_all v
+where v.teritory_name like 'Naray%';
+
+select c.trade_license_name,c.consumer_code,c.status,c.type,c.customer_name
+from consumer_teritory ct 
+join consumer c on c.id =ct.consumer_id
+where c.trade_license_name like 'Default%'
+and ct.teritory_id=13338;
+
+select c.trade_license_name,srrvt.route_id,srrvt.visit_day,srrf.visit_freq,bu.user_id,bu.user_name
+from bruser bu
+join sales_rep_route_visit_day srrvt on srrvt.sales_rep_id = bu.user_id
+join sales_rep_route_frequency srrf   on srrf.sales_rep_id = bu.user_id
+join consumer_teritory ct on ct.teritory_id = srrvt.route_id
+join consumer c on c.id = ct.consumer_id
+where c.trade_license_name like 'Default%'
+--and srrvt.route_id= 13338
+and bu.user_name= 103434;
+==============
+

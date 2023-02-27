@@ -1,0 +1,128 @@
+=============
+========Teritory Wise Target(Contact_Module)=====
+-----------------------------------------------
+TMO1200 = MBD_MAGIC
+=============
+TM01001 = MBD_PCC	
+TM01002 = MBD_PCC
+TM01003 = MBD_PCC
+TM01004 = MBD_PCC
+TM01005 = MBD_PCC
+=============	
+TM01001 = MBD_RGULAR
+TM01004 = MBD_RGULAR
+TM01005 = MBD_RGULAR
+TM01010 = MBD_RGULAR
+TM01011 = MBD_RGULAR
+
+TMO1006 = MARISE
+TMO1004 = MARISE
+TMO1015 = MARISE
+
+TMO1017 = SUNMOON
+TMO1035 = SUNMOON
+TMO1047 = SUNMOON
+-------------------------------------------------
+=================================================
+Select*
+from v_teritory_all
+where teritory_name like 'Ghoraghat%';
+=============
+SELECT  bcn.contact_number,ba.Contact_module,ba.is_repeat_contact,ba.*      
+From    bractivity ba 
+JOIN    bractivity_consumer bc ON ba.br_activity_consumer_id = bc.id
+JOIN    bractivity_contact bcn ON bc.BR_ACTIVITY_CONTACT_ID = bcn.id
+JOIN    bruser bu ON bu.user_id = ba.br_user_id
+where   to_char(ba.add_date_time,'DD-MM-YY') = '01-01-23'
+and	ba.Contact_module ='MBD_PCC'
+and     ba.offered_brand in (22,23)
+and     ba.is_repeat_contact=1
+and     bcn.contact_number in (01999999998);
+==================
+UPDATE bractivity ba 
+SET ba.add_date_time = '12-DEC-22 12.06.10.099571000 PM'
+WHERE ba.id = 10360793;
+
+=====================
+INSERT INTO Territory_Wise_Target (ID,ADDED_DATE,APPLICABLE_FROM,APPLICABLE_TILL,CONTACT_MODULE,TERITORY_ID,ADDED_BY)
+VALUES (490,'04-JAN-23','04-JAN-23','31-JAN-23','MBD_PCC',1001,221);
+=====================
+INSERT INTO Brand_Wise_Constraint_Target (
+ID,ADDED_DATE,BUNDLE_SALES_TARGET,CONTACT_LIMIT,CONTACT_TARGET,FREE_SAMPLING,PACKET_SALES_TARGET,
+VAO_SALES_TARGET,BRAND_VARIANT_ID,TERRITORY_WISE_TARGET_ID)
+VALUES (449,'04-JAN-23',15,25,25,16,0,0,100,489);
+
+==================
+
+
+SELECT  bcn.contact_number,ba.*      
+From    bractivity ba 
+JOIN    bractivity_consumer bc ON ba.br_activity_consumer_id = bc.id
+JOIN    bractivity_contact bcn ON bc.BR_ACTIVITY_CONTACT_ID = bcn.id
+JOIN    bruser bu ON bu.user_id = ba.br_user_id
+where   to_date(to_char(ba.add_date_time,'dd-mm-yyyy'), 'dd-mm-yyyy') BETWEEN to_date('01-12-2022', 'dd-mm-yyyy') 
+        AND to_date('01-01-2023', 'dd-mm-yyyy')
+and     ba.contact_module in ('MBD_REGULAR')
+and     ba.is_repeat_contact=0
+--and     bcn.contact_number in (01999999998);
+=============
+01944444444 brand new pcc 1 activity
+01887229188 , 01837293218 mbd_regular module a activity ache 2 ta
+===========second day activity MBD_PCC=
+01306429282
+01859597710
+===========
+BR_ACTIVITY_CONTACT_ID=3970675  total 4 ta activity
+===========
+2946760
+=====================
+SELECT bc.contact_number,cac.br_activity_contact_id,cac.contact_module,cac.updated_date,cac.activity_count,
+    case when cac.contact_module='MBD_REGULAR' and cac.activity_count=2 then 1
+         when cac.contact_module='MBD_PCC'     and cac.activity_count=2 then 2 else 3
+    end type
+    
+FROM apptm.consumer_activity_count cac
+join apptm.bractivity_contact bc on cac.br_activity_contact_id = bc.id
+where cac.contact_module in('MBD_REGULAR','MBD_PCC')
+and cac.activity_count > 1
+ORDER BY cac.br_activity_contact_id
+;
+
+=========================================
+select*
+from APPTM.bruser_pcc_status
+where br_user_user_id=27124;
+
+==========================================
+select brac.id,pct.bractivity_id,brac.br_user_id,
+       bcc.contact_number,brac.br_activity_consumer_id,pct.contact_type,brac.target_date
+from APPTM.bractivity brac
+join APPTM.pcc_contact_track pct on pct.bractivity_id = brac.id
+join APPTM.bractivity_consumer bc on bc.id = brac.br_activity_consumer_id
+join APPTM.bractivity_contact bcc on bcc.id = bc.br_activity_contact_id
+where brac.target_date between '09-JAN-23' and '10-JAN-23'
+and pct.contact_type in('SECOND_DAY','FIRST_DAY')
+order by brac.br_activity_consumer_id,brac.target_date,brac.br_user_id;
+=======================
+$2y$10$LsIw.BHExBxdkeclCCDx/uII0ZZdEATvsTzR9RyHTH6dKA71e.Yxa
+
+$2a$10$tv48q2NfyNw1eAT8ck7tAu6oqaxSAm9RvynTrTZ45hJBra/innsYW
+
+r29735
+===================
+730180457417
+===========
+Dear All,
+A new CEP app has been launched in 57 Territory, So you have kindly requested to install the app from the Bikroy app. Our latest app version is  1.0.0-r.
+
+Regards
+Suffix IT Team
+
+===
+8076632
+8076630
+8076631
+
+
+
+
